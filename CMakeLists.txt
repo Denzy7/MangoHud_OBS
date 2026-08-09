@@ -15,6 +15,8 @@ target_include_directories(MangoHud_OBS PRIVATE
 )
 target_link_libraries(MangoHud_OBS PRIVATE ${obs_frontend_api_LIBRARIES})
 
+add_executable(MangoHud_OBS_getstats obs_getstats.c obs_shared.c)
+
 install(TARGETS MangoHud_OBS
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/obs-plugins
 )
